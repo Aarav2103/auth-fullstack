@@ -121,18 +121,21 @@ export default function SignupPage() {
 
       {/* Password */}
       <div>
-        <label htmlFor="password" className="block text-sm font-medium text-slate-400">
-          Password
-        </label>
-        <input
-          id="password"
-          type="password"
-          value={user.password}
-          onChange={(e) => setUser({ ...user, password: e.target.value })}
-          placeholder="Enter password"
-          className="mt-1 w-full rounded-lg bg-white/5 px-4 py-2 text-slate-100 border border-gray-700/30 shadow-inner focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
-        />
-      </div>
+  <label htmlFor="password" className="block text-sm font-medium text-slate-400">
+    Password
+  </label>
+  <input
+    id="password"
+    type="password"
+    value={user.password}
+    onChange={(e) => setUser({ ...user, password: e.target.value })}
+    placeholder="Enter password"
+    className="mt-1 w-full rounded-lg bg-white/5 px-4 py-2 text-slate-100 border border-gray-700/30 shadow-inner focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+  />
+  <p className="mt-1 text-xs text-slate-500">
+    Must be at least 8 characters and include an uppercase letter, lowercase letter, number, and special character.
+  </p>
+</div>
 
       {/* Button */}
       <button
