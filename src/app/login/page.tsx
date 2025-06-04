@@ -23,9 +23,9 @@ export default function LoginPage() {
       toast.success("Login success");
       router.push("/profile");
     } catch (error: any) {
-      console.log("Login failed", error.message);
-      toast.error("Invalid email or password");
-    } finally {
+        console.log("Login failed", error.response?.data?.error || error.message);
+        toast.error(error.response?.data?.error || "Login failed");
+      } finally{
       setLoading(false);
     }
   };
