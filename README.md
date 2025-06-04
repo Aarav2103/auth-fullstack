@@ -1,6 +1,6 @@
 # Next.js Fullstack Auth System
 
-A basic fullstack authentication system built using **Next.js 14 (App Router)** and **TypeScript**.
+A fullstack authentication system built using **Next.js 14 (App Router)** and **TypeScript**.
 
 ## Features
 
@@ -13,11 +13,13 @@ A basic fullstack authentication system built using **Next.js 14 (App Router)** 
 
 This project is inspired by and extends [Hitesh Choudhary's auth repo](https://github.com/hiteshchoudhary/nextjs-fullstack-auth.git) with additional features and improvements.
 
-## Getting Started
+## Tech Stack
 
-```bash
-git clone https://github.com/yourusername/your-repo.git
-cd your-repo
-npm install
-npm run dev
-```
+- Next.js 13.4.7 (App Router) with TypeScript
+- MongoDB + Mongoose
+- JSON Web Tokens (JWT) for authentication
+- bcryptjs for password hashing
+- Nodemailer for email sending
+- Axios for HTTP requests
+- Tailwind CSS for styling
+- React Hot Toast for notifications
