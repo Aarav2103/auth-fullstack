@@ -90,19 +90,39 @@ export default function SignupPage() {
 
     <div className="space-y-5">
       {/* Username */}
-      <div>
-        <label htmlFor="username" className="block text-sm font-medium text-slate-400">
-          Username
-        </label>
-        <input
-          id="username"
-          type="text"
-          value={user.username}
-          onChange={(e) => setUser({ ...user, username: e.target.value })}
-          placeholder="Enter username"
-          className="mt-1 w-full rounded-lg bg-white/5 px-4 py-2 text-slate-100 border border-gray-700/30 shadow-inner focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
-        />
-      </div>
+    <div>
+      <label htmlFor="username" className="block text-sm font-medium text-slate-400">
+        Username
+      </label>
+      <input
+        id="username"
+        type="text"
+        value={user.username}
+        onChange={(e) => setUser({ ...user, username: e.target.value })}
+        placeholder="Enter username"
+        className="mt-1 w-full rounded-lg bg-white/5 px-4 py-2 text-slate-100 border border-gray-700/30 shadow-inner focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+      />
+      {loading && (
+        <div className="flex justify-center mt-2">
+        <svg className="animate-spin h-5 w-5 text-blue-500" viewBox="0 0 24 24">
+          <circle
+            className="opacity-25"
+            cx="12"
+            cy="12"
+            r="10"
+            stroke="currentColor"
+            strokeWidth="4"
+            fill="none"
+          />
+          <path
+            className="opacity-75"
+            fill="currentColor"
+            d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+          />
+        </svg>
+        </div>
+      )}
+    </div>
 
       {/* Email */}
       <div>
